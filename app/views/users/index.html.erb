@@ -1,0 +1,5 @@
+<h1>Listing users <small><%= link_to 'New User', new_user_path %></small></h1>
+<div class="container">
+  <%= render @users %>
+</div>
+<br><%= link_to "Load More", users_path, class: "load-more" %>
