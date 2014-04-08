@@ -18,3 +18,8 @@
 	padding: 15px;
 	color: #fff;
 }
+
+.load-more-container{
+	@extend .container;
+	text-align: center;
+}
