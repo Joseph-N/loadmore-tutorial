@@ -1,3 +1,4 @@
+// when the page is ready for manipulation
 $(document).ready(function(){
 	// when the load more link is clicked
 	$('a.load-more').click(function(e){
@@ -10,14 +11,15 @@ $(document).ready(function(){
 
         // make an ajax call passing along our last user id
         $.ajax({
+        	// make a get request to the server
             type: "GET",
             // get the url from the href attribute of our link
             url: $(this).attr('href'),
-            // pass in our last id as part of the data being sent to
-            // our rails app
+            // send the last id to our rails app
             data: { id: last_id },
+            // the response will be a script
             dataType: "script"
         });
 
-	})
-})
+	});
+});
